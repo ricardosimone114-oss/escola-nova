@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escola Nova</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand" aria-label="Escola Nova logo">
+      <svg class="brand-logo" viewBox="0 0 220 180" role="img" aria-label="Logo Escola Nova">
+        <path d="M110 18 L166 142 L138 142 L110 85 L82 142 L54 142 Z" fill="#9E8FE7"/>
+        <path d="M70 98 C88 82, 132 82, 150 98 C144 126, 129 140, 110 140 C91 140, 76 126, 70 98Z" fill="#E7D9A7"/>
+      </svg>
+      <div class="brand-copy">
+        <span class="brand-text">Escola Nova</span>
+        <span class="brand-subtitle">CURSO TÉCNICO</span>
+      </div>
+    </div>
+    <button onclick="mostrar('Professores')">Professores</button>
+    <button onclick="mostrar('Alunos')">Alunos</button>
+    <button onclick="mostrar('Matrículas')">Matrículas</button>
+    <button onclick="mostrar('Turmas')">Turmas</button>
+  </aside>
+
+  <main>
+    <h1>Painel escolar</h1>
+    <p>Gerencie os cadastros da sua escola.</p>
+
+    <section class="cards">
+      <div class="card">Professores<h2 id="totalProfessores">0</h2></div>
+      <div class="card">Alunos<h2 id="totalAlunos">0</h2></div>
+      <div class="card">Matrículas<h2 id="totalMatrículas">0</h2></div>
+      <div class="card">Turmas<h2 id="totalTurmas">0</h2></div>
+    </section>
+
+    <section class="painel">
+      <h2 id="titulo">Cadastro de Alunos</h2>
+      <form id="formulario">
+        <input id="nome" placeholder="Nome completo" required>
+        <input id="detalhe" placeholder="E-mail, série ou informação" required>
+        <button type="submit">Cadastrar</button>
+      </form>
+
+      <h2>Registros cadastrados</h2>
+      <div class="tabela">
+        <table>
+          <thead>
+            <tr><th>Nome</th><th>Informação</th><th>Ação</th></tr>
+          </thead>
+          <tbody id="lista"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
